@@ -1,0 +1,70 @@
+body {
+  background-image: url(https://thumbs.dreamstime.com/b/renewable-energy-concept-earth-day-environment-protection-hands-protect-forests-grow-ground-help-save-world-167178129.jpg);
+}
+
+#weather-app .container .header-text {
+  font-size: 25px;
+  color: white;
+  margin-left: 3.5%;
+}
+#weather-app .container .weather {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+#weather-app .container .weather .day {
+  width: 8%;
+  border: 1px solid #266280;
+  background-color: #266280;
+  border-radius: 25px;
+}
+#weather-app .container .weather .day .header {
+  color: rgb(197, 193, 193);
+}
+#weather-app .container .weather .day .header h1 {
+  font-size: 40px;
+  line-height: 0px;
+}
+#weather-app .container .weather .day .main p {
+  transform: translate(0px, 250px);
+  font-size: 20px;
+}
+#weather-app .container .weather .day .celcius {
+  color: rgb(197, 193, 193);
+  line-height: 7px;
+}
+#weather-app .container .weather .day .celcius h1 {
+  font-size: 30px;
+}
+#weather-app .container .weather .day .celcius p {
+  font-size: 20px;
+}
+#weather-app .container .weather .w-1 .main {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cloudy_sky_%2826171935906%29.jpg/1024px-Cloudy_sky_%2826171935906%29.jpg);
+  height: 300px;
+}
+#weather-app .container .weather .w-2 .main {
+  background-image: url(https://i1.sndcdn.com/artworks-000504621423-1huu3r-t500x500.jpg);
+  height: 300px;
+}
+#weather-app .container .weather .w-3 .main {
+  background-image: url(https://i2-prod.coventrytelegraph.net/incoming/article23459672.ece/ALTERNATES/s615/1_Spring-Sunshine.jpg);
+  height: 300px;
+}
+#weather-app .container .weather .w-4 .main {
+  background-image: url(https://i1.sndcdn.com/artworks-000504621423-1huu3r-t500x500.jpg);
+  height: 300px;
+}
+#weather-app .container .weather .w-5 .main {
+  background-image: url(https://i2-prod.coventrytelegraph.net/incoming/article23459672.ece/ALTERNATES/s615/1_Spring-Sunshine.jpg);
+  height: 300px;
+}
+#weather-app .container .weather .w-6 .main {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cloudy_sky_%2826171935906%29.jpg/1024px-Cloudy_sky_%2826171935906%29.jpg);
+  height: 300px;
+}
+#weather-app .container .weather .w-7 .main {
+  background-image: url(https://i1.sndcdn.com/artworks-000504621423-1huu3r-t500x500.jpg);
+  height: 300px;
+}/*# sourceMappingURL=style.css.map */

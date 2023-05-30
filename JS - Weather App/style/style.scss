@@ -1,0 +1,99 @@
+@use "../style/utils/variable" as variable;
+
+
+body {
+    background-image: url(https://thumbs.dreamstime.com/b/renewable-energy-concept-earth-day-environment-protection-hands-protect-forests-grow-ground-help-save-world-167178129.jpg);
+}
+
+#weather-app {
+
+    .container {
+
+        .header-text {
+            font-size: 25px;
+            color: variable.$whiteColor;
+            margin-left: 3.5%;
+        }
+
+        .weather {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+
+            .day {
+                width: 8%;
+                border: 1px solid variable.$blueColor;
+                background-color: variable.$blueColor;
+                border-radius: 25px;
+
+
+                .header {
+                    color: variable.$greyColor;
+
+                    h1 {
+                        font-size: 40px;
+                        line-height: 0px;
+                    }
+                }
+
+                .main {
+
+                    p {
+                        transform: translate(0px, 250px);
+                        font-size: 20px;
+                    }
+                }
+
+                .celcius {
+                    color: variable.$greyColor;
+                    line-height: 7px;
+
+                    h1 {
+                        font-size: 30px;
+                    }
+
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .w-1 .main {
+                background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cloudy_sky_%2826171935906%29.jpg/1024px-Cloudy_sky_%2826171935906%29.jpg);
+                height: 300px;
+            }
+
+            .w-2 .main {
+                background-image: url(https://i1.sndcdn.com/artworks-000504621423-1huu3r-t500x500.jpg);
+                height: 300px;
+            }
+
+            .w-3 .main {
+                background-image: url(https://i2-prod.coventrytelegraph.net/incoming/article23459672.ece/ALTERNATES/s615/1_Spring-Sunshine.jpg);
+                height: 300px;
+            }
+
+            .w-4 .main {
+                background-image: url(https://i1.sndcdn.com/artworks-000504621423-1huu3r-t500x500.jpg);
+                height: 300px;
+            }
+
+            .w-5 .main {
+                background-image: url(https://i2-prod.coventrytelegraph.net/incoming/article23459672.ece/ALTERNATES/s615/1_Spring-Sunshine.jpg);
+                height: 300px;
+            }
+
+            .w-6 .main {
+                background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cloudy_sky_%2826171935906%29.jpg/1024px-Cloudy_sky_%2826171935906%29.jpg);
+                height: 300px;
+            }
+
+            .w-7 .main {
+                background-image: url(https://i1.sndcdn.com/artworks-000504621423-1huu3r-t500x500.jpg);
+                height: 300px;
+            }
+
+        }
+    }
+}
