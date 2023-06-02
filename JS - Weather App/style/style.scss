@@ -6,141 +6,18 @@ body {
     background-repeat: no-repeat;
 }
 
-
-// #weather-app {
-
-//     .container {
-
-//         .input {
-//             margin-top: 2%;
-//             display: flex;
-//             justify-content: center;
-//             align-items: center;
-
-//             input {
-//                 font-size: 15px;
-//                 color: variable.$blackColor;
-//                 border-radius: 10px;
-//                 border: none;
-//                 padding: 7px 10px;
-//                 font-size: 20px;
-//             }
-
-//             button {
-//                 padding: 5px 20px;
-//                 height: 34px;
-//                 margin-left: 2%;
-//                 font-size: 17px;
-//                 background-color: variable.$whiteColor;
-//                 color: variable.$blackColor;
-//                 border: none;
-//                 border-radius: 10px;
-//                 cursor: pointer;
-
-//                 &:hover {
-//                     background-color: variable.$blackColor;
-//                     color: variable.$whiteColor;
-//                 }
-//             }
-//         }
-
-//         .weather {
-//             margin-top: 9%;
-//             display: flex;
-//             justify-content: space-around;
-//             align-items: center;
-//             text-align: center;
-
-//             .day {
-//                 width: 8%;
-//                 border: 1px solid variable.$blueColor;
-//                 background-color: variable.$blueColor;
-//                 border-radius: 25px;
-
-
-//                 .header {
-//                     color: variable.$greyColor;
-
-//                     h1 {
-//                         font-size: 40px;
-//                         line-height: 0px;
-//                     }
-//                 }
-
-//                 .main {
-
-//                     p {
-//                         transform: translate(0px, 250px);
-//                         font-size: 20px;
-//                     }
-//                 }
-
-//                 .celcius {
-//                     color: variable.$greyColor;
-//                     line-height: 7px;
-
-//                     h1 {
-//                         font-size: 30px;
-//                     }
-
-//                     p {
-//                         font-size: 20px;
-//                     }
-//                 }
-//             }
-
-//             .w-1 .main {
-//                 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cloudy_sky_%2826171935906%29.jpg/1024px-Cloudy_sky_%2826171935906%29.jpg);
-//                 height: 300px;
-//             }
-
-//             .w-2 .main {
-//                 background-image: url(https://i1.sndcdn.com/artworks-000504621423-1huu3r-t500x500.jpg);
-//                 height: 300px;
-//             }
-
-//             .w-3 .main {
-//                 background-image: url(https://i2-prod.coventrytelegraph.net/incoming/article23459672.ece/ALTERNATES/s615/1_Spring-Sunshine.jpg);
-//                 height: 300px;
-//             }
-
-//             .w-4 .main {
-//                 background-image: url(https://i1.sndcdn.com/artworks-000504621423-1huu3r-t500x500.jpg);
-//                 height: 300px;
-//             }
-
-//             .w-5 .main {
-//                 background-image: url(https://i2-prod.coventrytelegraph.net/incoming/article23459672.ece/ALTERNATES/s615/1_Spring-Sunshine.jpg);
-//                 height: 300px;
-//             }
-
-//             .w-6 .main {
-//                 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cloudy_sky_%2826171935906%29.jpg/1024px-Cloudy_sky_%2826171935906%29.jpg);
-//                 height: 300px;
-//             }
-
-//             .w-7 .main {
-//                 background-image: url(https://i1.sndcdn.com/artworks-000504621423-1huu3r-t500x500.jpg);
-//                 height: 300px;
-//             }
-
-//         }
-//     }
-// }
-
-
-// ================================================================
-
-
 #weather-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .container {
 
         .card {
             width: 90%;
-            max-width: 470px;
+            max-width: 400px;
             background: linear-gradient(135deg, #00feba, #5b548a);
-            color: white;
+            color: variable.$whiteColor;
             margin: 7% auto 0;
             border-radius: 20px;
             padding: 40px 35px;
@@ -155,8 +32,8 @@ body {
                 input {
                     border: 0;
                     outline: 0;
-                    background: #ebfffc;
-                    color: #555;
+                    background: variable.$whiteColor;
+                    color: variable.$blackColor;
                     padding: 10px 25px;
                     height: 50px;
                     border-radius: 25px;
@@ -168,7 +45,7 @@ body {
                 button {
                     border: 0;
                     outline: 0;
-                    background: #ebfffc;
+                    background: variable.$whiteColor;
                     border-radius: 50px;
                     width: 60px;
                     height: 60px;
@@ -179,20 +56,21 @@ body {
                     }
 
                     &:hover {
-                        background-color: black;
-                        color: white;
+                        background-color: variable.$blackColor;
+                        color: variable.$whiteColor;
                     }
                 }
             }
 
             .weather {
 
-                img {
+                .weather-icon {
                     width: 170px;
-                    margin-top: 1%;
+                    margin-top: 2%;
                 }
 
-                .text {
+                .city-text,
+                .wind-text {
                     line-height: 1px;
 
                     h1 {
@@ -211,21 +89,23 @@ body {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    padding: 0 20px;
                     margin-top: 50px;
 
                     .col {
                         display: flex;
+                        justify-content: center;
                         align-items: center;
-                        text-align: left;
+                        text-align: center;
 
                         img {
                             width: 40px;
                             margin-right: 10px;
                         }
 
-                        div {
+                        .humidity-text,
+                        .wind-text {
                             line-height: 1px;
+                            margin-top: 25%;
                         }
 
                         .humidity,
@@ -239,65 +119,3 @@ body {
         }
     }
 }
-
-
-// ================================================================
-
-
-
-// body {
-//     background-color: azure;
-//     background-image: url('https://www#heymind#org.uk/wp-content/uploads/2023/05/cirrus_clouds_aspot_AdobeStock.jpg');
-// }
-
-// .heading {
-//     font-size: 50px;
-//     color: white;
-//     text-align: center;
-//     background-color: crimson;
-//     margin-bottom: 20px;
-// }
-
-// .boxes {
-//     background-color: whitesmoke;
-//     width: 200px;
-//     height: 400px;
-//     box-shadow: 4px 7px #999999;
-//     border-radius: 12px;
-//     margin-left: 50px;
-//     margin-top: 40px;
-
-//     .day {
-//         background-color: darkcyan;
-//         width: 200px;
-//         height: 20%;
-//         color: white;
-//         text-align: center;
-//         border-radius: 12px;
-//         font-size: 40px;
-//         padding-top: 15px;
-//     }
-
-//     .temperature {
-//         margin-top: -20px;
-//         text-align: center;
-
-
-//         color: gray;
-//         font-size: 50px;
-//     }
-
-//     .icon {
-//         color: dodgerblue;
-//         font-size: 90px;
-//         margin-left: 40px;
-//         margin-top: -60px;
-//     }
-
-//     .weather {
-//         font-size: 30px;
-//         text-align: center;
-//         color: #999999;
-//         margin-top: -70px;
-//     }
-// }

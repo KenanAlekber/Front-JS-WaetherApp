@@ -1,65 +1,48 @@
-// let search = document.querySelector(".search");
-// let btn = document.querySelector(".btn");
-
-// async function getData(url) {
-//     try {
-//         let data = await fetch(url);
-//         return data.json();
-//     } catch {
-//         alert("Error");
-//     }
-// }
+const apiKey = "ba725ae303d31716434917c55f0a4699";
+const input = document.querySelector(".input");
+const btn = document.querySelector(".btn");
+const img = document.querySelector(".weather-icon");
 
 
+async function checkWeather(city) {
+    let apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=56b25a787f6f4e4e90372918232805&q=${city}&days=7&aqi=no&alerts=no`;
 
-// fetch("https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}")
+    const response = await fetch(apiUrl + `&appid=${apiKey}`);
 
-// =======================================================
-
-
-// let container = document.querySelector(".container");
-// let card = document.querySelector(".card");
-// let weather = document.querySelector(".weather");
-// let details = document.querySelector(".details")
-// let searchInput = document.querySelector(".input");
-// let btn = document.querySelector(".btn");
-
-
-// btn.addEventListener("click", () => {
-
-//     const APIKey = "ba725ae303d31716434917c55f0a4699";
-//     const city = document.querySelector(".input")
-
-//     if (city === "")
-//         return;
+    if (response.ok) {
+        var data = await response.json();
+        document.querySelector('.city').innerHTML = data.location.name;
+        document.querySelector('.temp').innerHTML = data.current.temp_c + "°C";
+        document.querySelector('.humidity').innerHTML = data.current.humidity + "%";
+        document.querySelector('.wind').innerHTML = data.current.wind_kph + "km/h";
 
 
-//     fetch("https://api.openweathermap.org/data/2.5/weather?lat=40.40&lon=49.86&appid=25e6b15217a429db2159a5489522b44d")
-//         .then(response => response.json())
-//         .then(json => {
+        if (data.current.condition.text === "Sunny") {
+            img.src = "../public/images/sunny.png"
+        }
+        else if (data.current.condition.text === "Clouds") {
+            img.src = "../public/images/clouds.png"
+        }
+        else if (data.current.condition.text === "Rainny") {
+            img.src = "../public/images/rainny.png"
+        }
+        else if (data.current.condition.text === "Drizzle") {
+            img.src = "../public/images/drizzle.png"
+        }
+        else if (data.current.condition.text === "Clear") {
+            img.src = "../public/images/clear.webp"
+        }
+        else if (data.current.condition.text === "Snowly") {
+            img.src = "../public/images/snowly.jpg"
+        } else {
+            img.src = data.current.condition.icon
+        }
+    }
+    else {
+        alert("Wrong Location !!!")
+    }
+}
 
-//         })
-
-// })
-
-// ================================================================
-
-
-// async function checkWeather() {
-
-// }
-
-// fetch("https://api.openweathermap.org/data/2.5/weather?lat=40.40&lon=49.86&appid=25e6b15217a429db2159a5489522b44d")
-//     .then(response => response.json())
-//     .then(data => { console.log(data) })
-
-// async function checkWeather() {
-//     const response = await fetch("https://api.openweathermap.org/data/2.5/weather?lat=40.40&lon=49.86&appid=25e6b15217a429db2159a5489522b44d");
-//     var data = await response.json();
-//     document.getElementsByClassName('heading')[0].innerHTML = data.name;
-//     document.getElementsByClassName('temperature')[0].innerHTML = data.main.temp;
-//     document.getElementsByClassName('weather')[0].innerHTML = data.weather[0].main;
-//     document.getElementsByClassName('icon')[0].innerHTML = data.weather[0].icon;
-// }
-
-// checkWeather()
+btn.addEventListener("click", () => {
+    checkWeather(input.value);
+});
