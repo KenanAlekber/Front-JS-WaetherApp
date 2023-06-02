@@ -6,18 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script src="../src/index.js"></script>
+    <script src="../src/index.js" defer></script>
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/b4de7de25c.js" crossorigin="anonymous"></script>
     <title>Weather App</title>
 </head>
 
 <body>
-    <main>
+    
+    <!-- <main>
         <section id="weather-app">
             <div class="container">
-                <div class="header-text">
-                    <h1>Palm Coast</h1>
-                </div>
+
+                <form class="input">
+                    <input type="text" class="search" placeholder="Enter the city">
+                    <button type="submit" class="btn">Submit</button>
+                </form>
 
                 <div class="weather">
                     <div class="w-1 day">
@@ -110,10 +114,81 @@
                             <p>75°</p>
                         </div>
                     </div>
+
                 </div>
+
+            </div>
+        </section>
+    </main> -->
+
+
+
+    <!-- ============================================================ -->
+
+
+
+    <main>
+
+        <section id="weather-app">
+            <div class="container">
+
+                <div class="card">
+
+                    <div class="search">
+                        <input type="text" class="input" placeholder="Enter the city name">
+                        <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+
+                    <div class="weather">
+
+                        <img src="../public/images/rainny.png" class="weather-icon" alt="">
+                        <div class="text">
+                            <h1 class="temp">22°C</h1>
+                            <h2 class="city">New York</h2>
+                        </div>
+
+                        <div class="details">
+
+                            <div class="col">
+                                <img src="../public/images/humidity.png" alt="">
+                                <div>
+                                    <p class="humidity">50%</p>
+                                    <p>Humidity</p>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <img src="../public/images/Wind.png" alt="">
+                                <div>
+                                    <p class="wind">15 km/h</p>
+                                    <p>Wind Speed</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
         </section>
     </main>
+
+
+
+    <!-- ========================================================= -->
+
+
+
+    <!-- <div class="heading">FORECAST</div>
+    <div class="boxes">
+        <p class="day">SUN</p>
+        <p class="temperature">68</p>
+        <p class="icon"><i class="fa-solid fa-wind"></i></p>
+        <p class="weather"> Windy</p>
+    </div> -->
+
 </body>
 
 </html>
